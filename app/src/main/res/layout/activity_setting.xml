@@ -115,6 +115,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="5dp"
                         android:text="Phone"
+                        android:id="@+id/text_phone"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="20sp" />
 
@@ -152,29 +153,29 @@
                     android:padding="10dp">
 
                     <TextView
+                        android:id="@+id/userStreet"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="5dp"
                         android:drawablePadding="10dp"
-                        android:text="Hidalgo 25"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="20sp"
                         app:drawableStartCompat="@drawable/ic_home" />
 
                     <TextView
+                        android:id="@+id/userPostCode"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:text="Post code 38921"
                         android:textSize="18sp" />
 
                     <TextView
+                        android:id="@+id/userCity"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:layout_marginStart="15dp"
-                        android:text="Salvatierra - Guanajuato"
                         android:textSize="18sp" />
 
                     <com.google.android.material.divider.MaterialDivider
@@ -189,7 +190,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
-                        android:gravity="left"
+                        android:gravity="start"
                         android:text="Add address"
                         android:textColor="@android:color/holo_blue_dark" />
                 </LinearLayout>

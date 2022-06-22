@@ -38,7 +38,12 @@ class RegisterActivity : AppCompatActivity() {
                               binding.name.text.toString(),
                               binding.email.text.toString(),
                               binding.password.text.toString(),
-                              ""
+                              null,
+                              null,
+                              null,
+                              null,
+                              null,
+                              null
                          )
                     )
                } else
