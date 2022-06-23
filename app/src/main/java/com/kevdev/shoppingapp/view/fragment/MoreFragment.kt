@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.google.gson.Gson
-import com.kevdev.shoppingapp.R
 import com.kevdev.shoppingapp.data.DataHelper
 import com.kevdev.shoppingapp.data.SharePreferencesHelper
 import com.kevdev.shoppingapp.data.model.User
@@ -26,7 +25,6 @@ class MoreFragment : Fragment() {
           savedInstanceState: Bundle?
      ): View {
           binding = FragmentMoreBinding.inflate(layoutInflater, container, false)
-
           setup()
           return binding.root
      }
@@ -39,12 +37,10 @@ class MoreFragment : Fragment() {
           currentUser = Gson().fromJson(json, User::class.java)
 
           binding.userName.text = "Hi!, ${currentUser.name}"
-          if (currentUser.image == "")
-               binding.imageUser.setImageResource(R.drawable.icon)
-          else
-               binding.imageUser.setImageURI(
-                    Uri.parse(currentUser.image)
-               )
+
+          binding.imageUser.setImageURI(
+               Uri.parse(currentUser.image)
+          )
 
           //Fragment settings
           binding.moreOptionSettings.setOnClickListener {
@@ -61,4 +57,5 @@ class MoreFragment : Fragment() {
                     )
                )
      }
+
 }

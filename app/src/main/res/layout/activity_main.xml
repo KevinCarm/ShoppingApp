@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <ProgressBar
+        android:layout_below="@id/buttonCreateAccount"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:theme="@style/Widget.MaterialComponents.CircularProgressIndicator"
+        android:id="@+id/progressBar"/>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"

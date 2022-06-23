@@ -2,6 +2,7 @@ package com.kevdev.shoppingapp
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
           model.loginResult()
                .observe(this) {
                     if (it != null) {
+                         binding.progressBar.visibility = View.GONE
                          SharePreferencesHelper(this).saveValue(
                               DataHelper.Login.LOGIN_RESULT,
                               Gson().toJson(it)
@@ -43,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 
      private fun setup() {
           binding.buttonLogin.setOnClickListener {
+               binding.progressBar.visibility = View.VISIBLE
                login()
           }
           binding.buttonCreateAccount.setOnClickListener {

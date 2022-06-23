@@ -20,7 +20,7 @@
         tools:ignore="HardcodedText" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/image_user"
+        android:id="@+id/userImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_below="@id/title"
@@ -32,7 +32,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/image_user"
+        android:layout_below="@id/userImage"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp">
 
@@ -68,6 +68,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="5dp"
                         android:text="User name"
+                        android:id="@+id/text_name"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="20sp" />
 
@@ -91,6 +92,7 @@
                         android:layout_marginStart="15dp"
                         android:layout_marginBottom="5dp"
                         android:text="Email"
+                        android:id="@+id/text_email"
                         android:textColor="@android:color/holo_blue_dark"
                         android:textSize="20sp" />
 
@@ -191,7 +193,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="15dp"
                         android:gravity="start"
-                        android:text="Add address"
+                        android:text="Add/edit address"
                         android:textColor="@android:color/holo_blue_dark" />
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
