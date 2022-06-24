@@ -1,16 +1,20 @@
 package com.kevdev.shoppingapp.view.activities
 
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import com.kevdev.shoppingapp.data.DataHelper
 import com.kevdev.shoppingapp.data.SharePreferencesHelper
 import com.kevdev.shoppingapp.data.model.User
 import com.kevdev.shoppingapp.databinding.*
+import com.kevdev.shoppingapp.viewModel.ProductViewModel
 
 class SellProductActivity : AppCompatActivity() {
      private lateinit var binding: ActivitySellProductBinding
      private lateinit var currentUser: User
+     private val model: ProductViewModel by viewModels()
+
      override fun onCreate(savedInstanceState: Bundle?) {
           super.onCreate(savedInstanceState)
           binding = ActivitySellProductBinding.inflate(layoutInflater)
@@ -21,7 +25,8 @@ class SellProductActivity : AppCompatActivity() {
 
      private fun setup() {
           //Getting current user
-          val json = SharePreferencesHelper(applicationContext).getValue(DataHelper.Login.LOGIN_RESULT)
+          val json =
+               SharePreferencesHelper(applicationContext).getValue(DataHelper.Login.LOGIN_RESULT)
           currentUser = Gson().fromJson(json, User::class.java)
 
           //Toolbar setup
@@ -36,7 +41,12 @@ class SellProductActivity : AppCompatActivity() {
 
           //OnClickListeners
           binding.buttonSave.setOnClickListener {
+               model.getAllProducts()
+          }
 
+          model.getProducts().observe(this) { products ->
+               println("-------------------->")
+               println(products)
           }
      }
 }
