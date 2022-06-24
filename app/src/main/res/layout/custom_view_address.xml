@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/inputState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:background="@drawable/background_input"
+        android:drawablePadding="10dp"
+        android:hint="State"
+        android:inputType="text"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:id="@+id/inputPostCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:background="@drawable/background_input"
+        android:drawablePadding="10dp"
+        android:hint="Post Code"
+        android:inputType="number"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:id="@+id/inputCity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:background="@drawable/background_input"
+        android:drawablePadding="10dp"
+        android:hint="City"
+        android:inputType="text"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:id="@+id/inputStreet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:background="@drawable/background_input"
+        android:drawablePadding="10dp"
+        android:hint="Street"
+        android:inputType="text"
+        android:padding="10dp"
+        />
+</LinearLayout>

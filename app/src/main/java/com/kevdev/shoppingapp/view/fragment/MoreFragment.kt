@@ -13,6 +13,7 @@ import com.kevdev.shoppingapp.data.DataHelper
 import com.kevdev.shoppingapp.data.SharePreferencesHelper
 import com.kevdev.shoppingapp.data.model.User
 import com.kevdev.shoppingapp.databinding.FragmentMoreBinding
+import com.kevdev.shoppingapp.view.activities.SellProductActivity
 import com.kevdev.shoppingapp.view.activities.SettingActivity
 
 
@@ -42,9 +43,18 @@ class MoreFragment : Fragment() {
                Uri.parse(currentUser.image)
           )
 
-          //Fragment settings
+          //OnClickListeners
           binding.moreOptionSettings.setOnClickListener {
                openSettings()
+          }
+          binding.optionSell.setOnClickListener {
+               requireActivity()
+                    .startActivity(
+                         Intent(
+                              requireContext(),
+                              SellProductActivity::class.java
+                         )
+                    )
           }
      }
 

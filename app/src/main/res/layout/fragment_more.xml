@@ -44,87 +44,96 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/header"
-        android:layout_marginTop="50dp"
-        android:orientation="vertical">
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="10dp">
 
-        <TextView
-            android:id="@+id/more_option_search"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawablePadding="20sp"
-            android:padding="10dp"
-            android:text="Search"
-            android:textColor="#000"
-            android:textSize="20sp"
-            app:drawableStartCompat="@drawable/ic_search"
-            tools:ignore="HardcodedText" />
+            android:layout_height="match_parent"
+            android:layout_below="@id/header"
+            android:orientation="vertical">
 
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" />
+            <TextView
+                android:id="@+id/more_option_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="20sp"
+                android:padding="10dp"
+                android:text="Search"
+                android:focusable="true"
+                android:clickable="true"
+                android:selectAllOnFocus="true"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_search"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp" />
 
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:drawablePadding="20sp"
-            android:padding="10dp"
-            android:text="Sell a product"
-            android:textColor="#000"
-            android:textSize="20sp"
-            app:drawableStartCompat="@drawable/ic_sell"
-            tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/option_sell"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="20sp"
+                android:padding="10dp"
+                android:text="Sell a product"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_sell"
+                tools:ignore="HardcodedText" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:drawablePadding="20sp"
-            android:padding="10dp"
-            android:text="Search history"
-            android:textColor="#000"
-            android:textSize="20sp"
-            app:drawableStartCompat="@drawable/ic_history"
-            tools:ignore="HardcodedText" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="20sp"
+                android:padding="10dp"
+                android:text="Search history"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_history"
+                tools:ignore="HardcodedText" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" />
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:drawablePadding="20sp"
-            android:padding="10dp"
-            android:text="Close account"
-            android:textColor="#000"
-            android:textSize="20sp"
-            app:drawableStartCompat="@drawable/ic_power"
-            tools:ignore="HardcodedText" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="20sp"
+                android:padding="10dp"
+                android:text="Close account"
+                android:textColor="#000"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_power"
+                tools:ignore="HardcodedText" />
 
-        <com.google.android.material.divider.MaterialDivider
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" />
 
-    </LinearLayout>
+        </LinearLayout>
 
+    </com.google.android.material.card.MaterialCardView>
 
 </RelativeLayout>
