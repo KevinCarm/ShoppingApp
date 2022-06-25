@@ -16,17 +16,11 @@ class ProductViewModel : ViewModel() {
           .getInstance()
           .create(ProductApi::class.java)
 
-     private var products: MutableLiveData<List<Product>> = MutableLiveData()
 
-     fun getProducts(): LiveData<List<Product>> = products
-
-     fun getAllProducts() {
-          viewModelScope.launch {
-               val result = productApi.getAll()
-               if (result.isSuccessful) {
-                    withContext(Dispatchers.Main) {
-                         products.postValue(result.body())
-                    }
+     fun saveProduct(product: Product?) {
+          if (product != null) {
+               viewModelScope.launch {
+                    productApi.save(product)
                }
           }
      }
